@@ -1,0 +1,20 @@
+{
+  "name": "dom-builder",
+  "version": "1.0.0",
+  "description": "Builds dom elements from array of objects",
+  "license": "MIT",
+  "author": "Massimo Cassandro",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "UPD-version": "npx update-version  # --config=./dev-utilities.config.mjs",
+    "   upd@m": "npx upd@m"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.2",
+    "@massimo-cassandro/dev-updater": "^2.1.0",
+    "@massimo-cassandro/eslint-config": "^2.0.6",
+    "eslint": "^9.39.2",
+    "globals": "^16.5.0"
+  }
+}
