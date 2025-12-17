@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/dom-builder",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Builds dom elements from array of objects",
   "license": "MIT",
   "author": "Massimo Cassandro",
@@ -10,7 +10,8 @@
     "UPD-version": "npx update-version  # --config=./dev-utilities.config.mjs",
     "upd@m": "npx upd@m",
     "npm-publish": "npm publish",
-    "local test server": "python3 -m http.server"
+    "local demo server": "python3 -m http.server 8000",
+    "open demo": "open -n -a 'Google Chrome' --args --profile-directory='Profile 3' 'http://localhost:8000/demo/index.html'"
   },
   "files": [
     "src/**/*.{scss,css,js,map}",
