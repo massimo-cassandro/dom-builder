@@ -1,6 +1,6 @@
 {
-  "name": "dom-builder",
-  "version": "1.0.0",
+  "name": "@massimo-cassandro/dom-builder",
+  "version": "1.0.1",
   "description": "Builds dom elements from array of objects",
   "license": "MIT",
   "author": "Massimo Cassandro",
@@ -8,8 +8,14 @@
   "main": "index.js",
   "scripts": {
     "UPD-version": "npx update-version  # --config=./dev-utilities.config.mjs",
-    "   upd@m": "npx upd@m"
+    "upd@m": "npx upd@m",
+    "npm-publish": "npm publish",
+    "local test server": "python3 -m http.server"
   },
+  "files": [
+    "src/**/*.{scss,css,js,map}",
+    "index.js"
+  ],
   "devDependencies": {
     "@eslint/js": "^9.39.2",
     "@massimo-cassandro/dev-updater": "^2.1.0",

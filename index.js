@@ -219,7 +219,7 @@ function domBuilderBasicSetup (element, domBuilderItem) {
 export function domBuilder(structureArray = [], parent, options = {}) {
 
   options = {
-    emptyParent: true,
+    emptyParent: false,
 
     ...options
   };
