@@ -23,7 +23,7 @@ import { parseDomString } from './parseDomString.js';
  *     className: 'xxx' | ['class1', 'class2'], // anche `class`
  *     id: 'element-id',
  *     attrs: [attr_name, attr_value] | [[...], [...]] | {name: value},
- *     content: 'xxx' | 123 | function | HTMLElement,
+ *     content: 'xxx' | 123 | function | Element,
  *     condition: true | false,
  *     callback: el => ...,
  *     children: [...]
@@ -58,7 +58,7 @@ import { parseDomString } from './parseDomString.js';
  * @param {string|Array<string>} [structureArray[].class] - Alias di className.
  * @param {string} [structureArray[].id] - ID univoco dell'elemento.
  * @param {Array<[string, *]>|Array<Array<[string, *]>>|Object<string, *>} [structureArray[].attrs] - Attributi: coppia `[name, value]`, array di coppie o oggetto `{name: value}`.
- * @param {string|number|Function|HTMLElement} [structureArray[].content] - Contenuto dell'elemento: stringa, numero, funzione che restituisce contenuto, o HTMLElement.
+ * @param {string|number|Function|Element} [structureArray[].content] - Contenuto dell'elemento: stringa, numero, funzione che restituisce contenuto, o HTMLElement.
  * @param {boolean} [structureArray[].condition=true] - Se false, l'elemento non viene generato.
  * @param {Function} [structureArray[].callback] - Callback invocata quando l'elemento viene creato; riceve l'elemento come argomento.
  * @param {Array<Object>} [structureArray[].children] - Array di configurazione per elementi figlio.
@@ -142,7 +142,7 @@ export function domBuilder(structureArray = [], parent, options = {}) {
           content = String(item.content);
         }
 
-        if (content instanceof HTMLElement) {
+        if (content instanceof Element) {
           el.appendChild(content);
 
         } else {
