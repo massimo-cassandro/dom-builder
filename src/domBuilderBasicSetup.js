@@ -28,7 +28,9 @@ export function domBuilderBasicSetup (element, domBuilderItem) {
 
   // assegnazioen classi e id (dopo attrs in modo che le proprietà a livello di oggetto prevalgano)
   if(domBuilderItem.className) {
-    element.className = domBuilderItem.className;
+    element.className = Array.isArray(domBuilderItem.className)
+      ? domBuilderItem.className.filter(Boolean).join(' ')
+      : domBuilderItem.className;
   }
   if(domBuilderItem.id) {
     element.id = domBuilderItem.id;
