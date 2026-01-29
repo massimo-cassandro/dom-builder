@@ -54,7 +54,7 @@ import { parseDomString } from './parseDomString.js';
  * @param {Array<Object|string>} [structureArray=[]] - Array di configurazione degli elementi. Può contenere stringhe (con sintassi abbreviata secondo `parseDomString`) e/o oggetti di configurazione.
  * @param {string|Array<string>} [structureArray[].tag='div'] - Nome del tag HTML (es. 'div', 'p') o array di tag nidificati (es. ['div.container', 'section', 'article']).
  * @param {string|Array<string>} [structureArray[].tagName='div'] - Alias di tag
- * @param {string|Array<string>} [structureArray[].className] - Classe/i CSS: stringa singola o array di classi.
+ * @param {string|Array<string>} [structureArray[].className] - Classe/i CSS: stringa singola o array di classi, in quest'ultimo caso, i valori *falsy* vengopno rimossi.
  * @param {string|Array<string>} [structureArray[].class] - Alias di className.
  * @param {string} [structureArray[].id] - ID univoco dell'elemento.
  * @param {Array<[string, *]>|Array<Array<[string, *]>>|Object<string, *>} [structureArray[].attrs] - Attributi: coppia `[name, value]`, array di coppie o oggetto `{name: value}`.
