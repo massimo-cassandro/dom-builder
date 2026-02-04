@@ -1,6 +1,6 @@
 {
   "name": "@massimo-cassandro/dom-builder",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Builds dom elements from array of objects",
   "license": "MIT",
   "author": "Massimo Cassandro",

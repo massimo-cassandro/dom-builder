@@ -132,7 +132,7 @@ export function domBuilder(structureArray = [], parent, options = {}) {
       }
 
 
-      if (item.content) {
+      if (item.content != null) {
 
         let content = '';
         if (typeof item.content === 'function') {
