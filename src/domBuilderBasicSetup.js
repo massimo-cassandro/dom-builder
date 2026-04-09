@@ -20,8 +20,42 @@ export function domBuilderBasicSetup (element, domBuilderItem) {
     domBuilderItem.attrs = Object.entries(domBuilderItem.attrs);
   }
 
+  // gli attributi booleani non vengono aggiunti se il loro valore è false
+  const boolAttrs = [
+    'allowfullscreen',
+    'async',
+    'autocomplete',
+    'autofocus',
+    'autoplay',
+    'border',
+    'checked',
+    'compact',
+    'contenteditable',
+    'controls',
+    'default',
+    'loop',
+    'defer',
+    'disabled',
+    'formnovalidate',
+    'hidden',
+    'inert',
+    'ismap',
+    'multiple',
+    'muted',
+    'novalidate',
+    'open',
+    'readonly',
+    'required',
+    'reversed',
+    'selected',
+    'spellcheck',
+    'translate'
+  ];
+
+
+
   (domBuilderItem.attrs ?? []).forEach(attr => {
-    if (attr[1] != null) {
+    if (attr[1] != null && !(boolAttrs.includes(attr[0]) && attr[1]=== false)) {
       element.setAttribute(attr[0], String(attr[1]));
     }
   });

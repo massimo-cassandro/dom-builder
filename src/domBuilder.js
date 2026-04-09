@@ -73,7 +73,6 @@ export function domBuilder(structureArray = [], parent, options = {}) {
 
   options = {
     emptyParent: false,
-
     ...options
   };
 
